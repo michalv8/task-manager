@@ -1,0 +1,8 @@
+<menu xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    tools:context=".Main" >
+    <item android:id="@+id/menu_create_task"
+        android:title="@string/create_task"
+        android:icon="@android:drawable/ic_menu_add"
+        android:showAsAction="ifRoom"/>
+</menu>

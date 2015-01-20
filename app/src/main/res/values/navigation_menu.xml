@@ -1,0 +1,7 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string-array name="navigation_menu">
+        <item>Dashboard</item>
+        <item>View Tasks</item>
+    </string-array>
+</resources>
