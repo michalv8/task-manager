@@ -111,6 +111,9 @@ public class EditTaskActivity extends Activity implements Validator.ValidationLi
 
     @Override
     public void onValidationSucceeded() {
+        task.setTitle(taskTitle.getText().toString());
+        task.setDescription(taskDescription.getText().toString());
+        task.setDate(taskDateTime.getTime());
         task.save();
         Intent intent = new Intent(this, MainActivity.class);
         startActivity(intent);

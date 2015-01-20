@@ -5,24 +5,24 @@
     android:layout_height="match_parent">
 
 
-    <GridLayout
+    <LinearLayout
+        android:orientation="vertical"
         android:layout_width="match_parent"
-        android:layout_height="match_parent">
+        android:layout_height="wrap_content"></LinearLayout>
 
-        <TextView
-            android:layout_width="175dp"
-            android:layout_height="51dp"
-            android:textAppearance="?android:attr/textAppearanceLarge"
-            android:id="@+id/task_item_title"
-            android:layout_row="0"
-            android:layout_column="0" />
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="@dimen/task_date_height"
+        android:textSize="@dimen/task_item_date_font_size"
+        android:text="New Text"
+        android:id="@+id/task_item_date"
+        />
 
-        <TextView
-            android:layout_width="130dp"
-            android:layout_height="51dp"
-            android:textAppearance="?android:attr/textAppearanceMedium"
-            android:id="@+id/task_item_date"
-            android:layout_row="0"
-            android:layout_column="13" />
-    </GridLayout>
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="@dimen/task_title_height"
+        android:textSize="@dimen/task_item_title_font_size"
+        android:text="New Text"
+        android:id="@+id/task_item_title"
+        android:layout_gravity="right" />
 </LinearLayout>

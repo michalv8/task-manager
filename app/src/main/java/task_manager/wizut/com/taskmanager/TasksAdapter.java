@@ -7,16 +7,20 @@ import android.view.ViewGroup;
 import android.widget.ArrayAdapter;
 import android.widget.TextView;
 
+import java.text.SimpleDateFormat;
 import java.util.List;
+import java.util.Locale;
 
 /**
  * Created by micha_000 on 2015-01-06.
  */
 public class TasksAdapter extends ArrayAdapter<Task> {
 
+    SimpleDateFormat dateFormatter;
 
     public TasksAdapter(Context context, int resource, List<Task> objects) {
         super(context, resource, objects);
+        dateFormatter = new SimpleDateFormat("dd/MM/yyyy H:m", Locale.getDefault());
     }
 
     @Override
@@ -26,13 +30,11 @@ public class TasksAdapter extends ArrayAdapter<Task> {
         if(convertView == null){
             convertView = LayoutInflater.from(getContext()).inflate(R.layout.task_item, parent, false);
         }
-
         TextView tvTitle = (TextView) convertView.findViewById(R.id.task_item_title);
         TextView tvDate = (TextView) convertView.findViewById(R.id.task_item_date);
-        //TextView tvDes
 
         tvTitle.setText(task.getTitle());
-        tvDate.setText(task.getDate().toString());
+        tvDate.setText(dateFormatter.format(task.getDate()));
 
         return convertView;
     }
